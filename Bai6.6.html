@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 6.6</title>
+</head>
+<body onload="set()">
+<input type="range" id="good" min="1" max="3" step="1" onclick="check(1)">
+<br>
+<input type="range" id="cheap" min="1" max="3" step="1" onclick="check(2)">
+<br>
+<input type="range" id="fast" min="1" max="3" step="1" onclick="check(3)">
+<script>
+  function set() {
+    window.addEventListener("click", check)
+  }
+  function check(a) {
+    switch (a) {
+      case 1: {
+        if (document.getElementById("good").value === "3" && document.getElementById("cheap").value === "3" && document.getElementById("fast").value === "3") {
+          document.getElementById("fast").value = "1"
+        }
+        break
+      }
+      case 2: {
+        if (document.getElementById("good").value === "3" && document.getElementById("cheap").value === "3" && document.getElementById("fast").value === "3") {
+          document.getElementById("cheap").value = "1"
+        }
+        break
+      }
+      case 3: {
+        if (document.getElementById("good").value === "3" && document.getElementById("cheap").value === "3" && document.getElementById("fast").value === "3") {
+          document.getElementById("good").value = "1"
+        }
+        break
+      }
+      default: break
+    }
+  }
+
+</script>
+</body>
+</html>
